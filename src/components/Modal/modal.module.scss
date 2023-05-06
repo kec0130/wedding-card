@@ -1,0 +1,40 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/sizes';
+@use '/src/styles/constants/levels';
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: levels.$MODAL;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 70%);
+  backdrop-filter: blur(10px);
+}
+
+.modalContent {
+  width: 90%;
+  max-width: 800px;
+  overflow: hidden;
+  text-align: center;
+  background: colors.$WHITE;
+  border-radius: sizes.$BORDER_RADIUS;
+
+  .title {
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: colors.$GRAY1;
+    border-bottom: 1px solid colors.$GRAYD;
+  }
+
+  section {
+    max-height: 80vh;
+    padding: 0 24px 24px;
+    overflow-y: scroll;
+  }
+}
